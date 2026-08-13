@@ -12,7 +12,6 @@
 //     }
 // };
 
-
 class Solution {
 public:
     vector<int> twoSum(vector<int>& nums, int target) {
@@ -20,9 +19,9 @@ public:
         for (int i = 0; i < nums.size(); i++) {
             int complement = target - nums[i];
             if (mp.find(complement) != mp.end()) {
-                return {mp[complement], i};
+                return {mp[complement], i}; // pair found
             }
-            mp[nums[i]] = i;
+            mp[nums[i]] = i; // store current value with index
         }
         return {};
     }
