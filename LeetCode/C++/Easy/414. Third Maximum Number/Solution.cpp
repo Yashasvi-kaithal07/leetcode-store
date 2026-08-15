@@ -2,9 +2,9 @@ class Solution {
 public:
     int thirdMax(vector<int>& nums) {
         int n= nums.size();
-            long long v1 = INT_MIN;   
-            long long v2 = INT_MIN;   
-            long long v3 = INT_MIN;   
+         long long v1 = LLONG_MIN;   
+        long long v2 = LLONG_MIN;   
+        long long v3 = LLONG_MIN;     
 
             for(int i=0 ; i<n; i++){
                 if(nums[i] == v1 ||nums[i] == v2||nums[i] == v3){
@@ -23,7 +23,7 @@ public:
                     v3=nums[i];
                 }
     }
-    if(v3 == INT_MIN){
+    if(v3 == LLONG_MIN){
         return v1;
     }
     else {
