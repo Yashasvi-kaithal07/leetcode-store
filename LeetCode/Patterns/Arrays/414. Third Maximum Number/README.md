@@ -1,6 +1,6 @@
 # 📝 414. Third Maximum Number (LeetCode)
 
-🔗 [Problem Link](https://leetcode.com/problems/third-maximum-number/)
+🔗 [Problem Link](https://leetcode.com/problems/third-maximum-number/solutions/8451045/without-sorting-on-beats-100-by-amazingd-lo74/)
 
 ![Difficulty](https://img.shields.io/badge/Difficulty-Easy-brightgreen) ![Language](https://img.shields.io/badge/Language-C++-blue)
 
