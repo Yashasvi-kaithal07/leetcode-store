@@ -3,38 +3,28 @@ class Solution {
 public:
     bool isAnagram(string s, string t) {
 
-        // Step 1: Size check
           if(s.size() != t.size())
         {
             return false;
         }
 
-        int n = s.size();
+        // Step 2: Character frequency
+        int freq[26] = {0};
 
-        vector<int> visited(n, 0);
-
-        // Step 2: Har character of s ko t mein search karo
-        for(int i = 0; i < n; i++)
+        for(int i = 0; i < s.size(); i++)
         {
-            bool found = false;
+            freq[s[i] - 'a']++;
+            freq[t[i] - 'a']--;
+        }
 
-            for(int j = 0; j < n; j++)
-            {
-                if(s[i] == t[j] && visited[j] == 0)
-                {
-                    visited[j] = 1;
-                    found = true;
-                    break;
-                }
-            }
-
-            if(found == false)
+        // Step 3: Check frequency
+        for(int i = 0; i < 26; i++)
+        {
+            if(freq[i] != 0)
             {
                 return false;
             }
         }
-
-
         return true;
     }
 };
