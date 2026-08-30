@@ -3,7 +3,7 @@
 Track your progress on the Grind 75 coding interview preparation list.
 
 ## Progress
-- **Completed:** 3 / 75 (4.0%)
+- **Completed:** 4 / 75 (5.3%)
 
 ---
 
@@ -12,7 +12,7 @@ Track your progress on the Grind 75 coding interview preparation list.
 ### 📂 Array
 - [x] [Two Sum](./C++/Easy/1. Two Sum/)
 - [ ] Best Time to Buy and Sell Stock
-- [ ] Contains Duplicate
+- [x] [Contains Duplicate](./Plaintext/Easy/217. Contains Duplicate/)
 - [ ] Product of Array Except Self
 - [x] [Maximum Subarray](./C++/Medium/53. Maximum Subarray/)
 - [ ] Maximum Product Subarray
