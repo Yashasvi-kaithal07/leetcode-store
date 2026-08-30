@@ -1,11 +1,10 @@
-public:
-    bool containsDuplicate(vector<int>& nums) {
-    int n = nums.size();
-        vector<int> f(n, 0); // frequency array for each index
-
-        for (int i = 0; i < n; i++) {
-            int c = 0;
-            for (int j = 0; j < n; j++) {
                 if (nums[i] == nums[j]) {
-                    c++;
-                }
+            for (int j = 0; j < n; j++) {
+            int c = 0;
+        for (int i = 0; i < n; i++) {
+
+        vector<int> f(n, 0);
+    int n = nums.size();
+    bool containsDuplicate(vector<int>& nums) {
+public:
+class Solution {
