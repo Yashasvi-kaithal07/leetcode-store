@@ -43,7 +43,7 @@ for(int i=0 ; i<n ;i++){
     if(sum > maxsum){
         maxsum=sum;
     }
-    else if( sum < 0){
+     if( sum < 0){
         sum=0;
     }
 }
