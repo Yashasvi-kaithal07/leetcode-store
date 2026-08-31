@@ -24,12 +24,29 @@ public:
     // }
 
     //BETTER-----------------------------------
-    sort(nums.begin(), nums.end());
-    for(int i=0; i<n-1 ; i++){
-        if(nums[i]==nums[i+1]){
-            return true;
+    // sort(nums.begin(), nums.end());
+    // for(int i=0; i<n-1 ; i++){
+    //     if(nums[i]==nums[i+1]){
+    //         return true;
+    //     }
+    // }
+    // return false;
+    // }
+
+    //OPTIMISED
+        unordered_set<int> st;
+
+        for(int i = 0; i < nums.size(); i++)
+        {
+            if(st.find(nums[i]) != st.end())
+            {
+                return true;
+            }
+
+            st.insert(nums[i]);
         }
+
+        return false;
     }
-    return false;
-    }
+    
 };
