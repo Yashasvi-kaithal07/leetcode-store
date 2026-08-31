@@ -34,19 +34,21 @@ public:
     // }
 
     //OPTIMISED
-        unordered_set<int> st;
-
-        for(int i = 0; i < nums.size(); i++)
-        {
-            if(st.find(nums[i]) != st.end())
-            {
-                return true;
-            }
-
-            st.insert(nums[i]);
+    //     
+    
+   unordered_map<int, int> f;
+		
+        for(int i = 0; i < nums.size(); i++) {
+            f[nums[i]]++;
         }
 
+        for(auto x : f) {
+            if(x.second > 1){
+                return true;
+            }
+        }
         return false;
     }
+
     
 };
