@@ -14,6 +14,6 @@ public:
             st.erase(x);
         }
     }
-        return nums;
+        return nums3;
     }
 };
