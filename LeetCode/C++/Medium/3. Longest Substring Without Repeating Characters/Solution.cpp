@@ -1,6 +1,4 @@
-class Solution {
-public:
-    int lengthOfLongestSubstring(string s) {
+
 class Solution {
 public:
     int lengthOfLongestSubstring(string s) {
