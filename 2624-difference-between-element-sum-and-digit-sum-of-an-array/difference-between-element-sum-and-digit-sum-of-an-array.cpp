@@ -2,21 +2,20 @@ class Solution {
 public:
     int differenceOfSum(vector<int>& nums) {
 
-        int elementSum = 0;
-        int digitSum = 0;
+        int ans = 0;
 
-        for(int i = 0; i < nums.size(); i++) {
+        for(int num : nums) {
 
-            elementSum += nums[i];
+            ans += num;
 
-            int num = nums[i];
+            int temp = num;
 
-            while(num > 0) {
-                digitSum += num % 10;
-                num /= 10;
+            while(temp) {
+                ans -= temp % 10;
+                temp /= 10;
             }
         }
 
-        return abs(elementSum - digitSum);
+        return abs(ans);
     }
 };
