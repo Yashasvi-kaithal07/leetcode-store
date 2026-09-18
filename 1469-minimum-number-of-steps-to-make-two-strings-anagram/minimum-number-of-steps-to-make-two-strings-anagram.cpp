@@ -1,24 +1,27 @@
 class Solution {
 public:
     int minSteps(string s, string t) {
-                int count = 0;
+   vector<int> freq(26, 0);
 
+        // Count characters of s
         for(char ch : s) {
-            
-            // Find same character in t
-            auto it = find(t.begin(), t.end(), ch);
+            freq[ch - 'a']++;
+        }
 
-            if(it != t.end()) {
-                // Character mil gaya, remove it
-                t.erase(it);
-            }
-            else {
-                // Character nahi mila
-                count++;
+        // Match/remove characters using t
+        for(char ch : t) {
+            freq[ch - 'a']--;
+        }
+
+        int ans = 0;
+
+        // Positive frequencies are the required replacements
+        for(int count : freq) {
+            if(count > 0) {
+                ans += count;
             }
         }
 
-        return count;
-
+        return ans;
     }
 };
