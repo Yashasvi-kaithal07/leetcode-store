@@ -2,16 +2,13 @@ class Solution {
 public:
     vector<int> recoverOrder(vector<int>& order, vector<int>& friends) {
 
+        unordered_set<int> st(friends.begin(), friends.end());
+
         vector<int> ans;
 
-        for(int i = 0; i < order.size(); i++) {
-
-            for(int j = 0; j < friends.size(); j++) {
-
-                if(order[i] == friends[j]) {
-                    ans.push_back(order[i]);
-                    break;
-                }
+        for(int x : order) {
+            if(st.count(x)) {
+                ans.push_back(x);
             }
         }
 
