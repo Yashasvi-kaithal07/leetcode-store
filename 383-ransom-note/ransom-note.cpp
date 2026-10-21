@@ -1,19 +1,18 @@
 class Solution {
 public:
     bool canConstruct(string ransomNote, string magazine) {
-       map<char, int> freq;
-        map<char, int> freq2;
-
-        for(char ch : ransomNote) {
-            freq[ch]++;
-        }
+        int freq[26] = {0};
 
         for(char ch : magazine) {
-            freq2[ch]++;
+            freq[ch - 'a']++;
         }
 
-        for(auto it : freq) {
-            if(freq2[it.first] < it.second) {
+        for(char ch : ransomNote) {
+            freq[ch - 'a']--;
+        }
+
+        for(int i = 0; i < 26; i++) {
+            if(freq[i] < 0) {
                 return false;
             }
         }
