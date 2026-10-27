@@ -1,20 +1,22 @@
 class NumArray {
 public:
-    
-    vector<int> a;
-
+    vector<int>prefixS;
     NumArray(vector<int>& nums) {
-        a = nums;
+        prefixS = nums;
+
+        //calculating Prefix Sum
+        for(int i=1; i < prefixS.size(); i++){
+            prefixS[i] = prefixS[i-1] + prefixS[i];
+        }
     }
     
     int sumRange(int left, int right) {
-        int sum = 0;
-        for(int i = left; i <= right; i++){
-            sum += a[i];
-        }
-        return sum;
-    }
+        if( left == 0){
+            return prefixS[right];
+        } //edge case 
 
+        return prefixS[right] - prefixS[left -1];
+    }
 };
 
 /**
